@@ -23,3 +23,16 @@
   color: #F2F2F2;
   cursor: pointer;
 }
+
+@media (max-width:720px){
+  .App {
+    grid-template-columns: auto auto;
+  }
+}
+@media (max-width:520px){
+  .App {
+    grid-template-columns: auto;
+  }
+  .element,html{scrollbar-width:none}
+  html::-webkit-scrollbar,.element::-webkit-scrollbar{display:none}
+}

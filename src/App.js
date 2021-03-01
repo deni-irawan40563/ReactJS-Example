@@ -1,19 +1,23 @@
-import './App.css';
-// import {Link} from 'react-router-dom'
+import { BrowserRouter, Route} from 'react-router-dom'
+import Props from './Example/Props/Props.jsx'
+import Home from './Example/Home.jsx'
+import Statefull from './Example/StateComponent/StateFull'
+import Stateless from './Example/StateComponent/StateLess'
+import State from './Example/State/State'
+import LemparProps from './Example/LemparFunctionProps/LemparProps.jsx'
+import LifeCycle from './Example/LifeCycle/LifeCycle'
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="ButtonLink">StateFul Component</h1>
-      <h1 className="ButtonLink">StateLess Component</h1>
-      <h1 className="ButtonLink">Props</h1>
-      <h1 className="ButtonLink">LifeCycle</h1>
-      <h1 className="ButtonLink">Connect BackEnd</h1>
-      <h1 className="ButtonLink">React Router</h1>
-      <h1 className="ButtonLink">LifeCycle</h1>
-      <h1 className="ButtonLink">Connect BackEnd</h1>
-      <h1 className="ButtonLink">React Router</h1>
-    </div>
+    <BrowserRouter>
+      <Route path="/" component={Home} exact/>
+      <Route path="/props" component={Props} />
+      <Route path="/statefull" component={Statefull} />
+      <Route path="/stateless" component={Stateless} />
+      <Route path="/state" component={State} />
+      <Route path="/lemparprops" component={LemparProps} />
+      <Route path="/lifecycle" component={LifeCycle} />
+    </BrowserRouter>
   );
 }
 
