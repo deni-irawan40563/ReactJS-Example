@@ -6,6 +6,7 @@ import Stateless from './Example/StateComponent/StateLess'
 import State from './Example/State/State'
 import LemparProps from './Example/LemparFunctionProps/LemparProps.jsx'
 import LifeCycle from './Example/LifeCycle/LifeCycle'
+import connectbackend from './Example/ConnectBackEnd/ConnectBackEnd'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path="/state" component={State} />
       <Route path="/lemparprops" component={LemparProps} />
       <Route path="/lifecycle" component={LifeCycle} />
+      <Route path="/connectbackend" component={connectbackend} />
     </BrowserRouter>
   );
 }

@@ -12,6 +12,7 @@ export default function Home() {
         <Link to="/state" className="ButtonLink">State</Link>
         <Link to="/lemparprops" className="ButtonLink">Lempar Function Props</Link>
         <Link to="/lifecycle" className="ButtonLink">Life Cycle Component</Link>
+        <Link to="/connectbackend" className="ButtonLink">Berintraksi dengan BackEnd</Link>
       </div>
     </div>
   )

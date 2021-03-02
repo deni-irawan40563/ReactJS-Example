@@ -1,0 +1,44 @@
+{
+  "product": [
+    {
+      "id": 2,
+      "name": "frisian flag kotak",
+      "image": "https://cf.shopee.co.id/file/6ef21614ece7baca48d1649ec86e76f7"
+    },
+    {
+      "id": 3,
+      "name": "frisian flag kaleng",
+      "image": "https://hariannusantara.com/wp-content/uploads/2019/06/harga-susu-frisian-flag-kaleng.jpg"
+    },
+    {
+      "id": 4,
+      "name": "frisian flag sachet",
+      "image": "https://cf.shopee.co.id/file/1ecc2664391a947c82bc4bf8b5280b06"
+    },
+    {
+      "id": 5,
+      "name": "dancow",
+      "image": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//83/MTA-4630401/dancow_nestle_dancow_fortigro_susu_bubuk_instan_usia_sekolah_sachet_-10_x_27_gr-_full02_lmrg2q2d.jpg"
+    },
+    {
+      "id": 6,
+      "name": "L men",
+      "image": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/6/20/5436513/5436513_22f9aba5-b398-4b4d-92e5-a806902cbc0d_1072_1072.jpg"
+    },
+    {
+      "id": 7,
+      "name": "bear brand",
+      "image": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//102/MTA-5884617/bear_brand_bear_brand_189ml_x_30_pcs_full02_ngec419a.jpg"
+    },
+    {
+      "id": 8,
+      "name": "appeton weight gain",
+      "image": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//83/MTA-2022606/appeton_susu-gemuk-appeton-weight-gain-450gr-rasa-coklat--penambah-berat-badan-adult-dewasa_full02.jpg"
+    },
+    {
+      "id": 9,
+      "name": "ensure",
+      "image": "https://b7q8r3j2.rocketcdn.me/wp-content/uploads/2019/10/Ensure-Vanila.jpg"
+    }
+  ]
+}
