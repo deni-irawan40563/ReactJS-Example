@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import '../Container.css'
 export default class LifeCycle extends Component {
 /*=================== Mounting Component =================*/
 /*1*/   constructor(props){

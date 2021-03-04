@@ -2,3 +2,42 @@ body {
   margin: 0;
   background-color: #1B1B24;
 }
+.container {
+  border: 2px solid #61DAFB;
+  background-color: #222222;
+  border-radius: 15px;
+  color: #F2F2F2;
+}
+.card-img-top {
+  margin: 0 auto;
+  width: 280px;
+  height: 150px;
+}
+.card-img {
+  object-fit: cover;
+  max-width: 300px;
+}
+.card {
+  width: 300px;
+  border: 2px solid #61DAFB;
+  background-color: #222222;
+}
+p, h1 {
+  color: #F2F2F2 
+}
+.img {
+  width: 100%;
+}
+a:hover {
+  text-decoration: none;
+}
+h4:hover {
+  cursor: pointer;
+  color: #61DAFB;
+}
+.borderBox {
+  border: 1px solid #61DAFB;
+}
+.redux-img {
+  width: 50%;
+}

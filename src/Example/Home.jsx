@@ -13,6 +13,11 @@ export default function Home() {
         <Link to="/lemparprops" className="ButtonLink">Lempar Function Props</Link>
         <Link to="/lifecycle" className="ButtonLink">Life Cycle Component</Link>
         <Link to="/connectbackend" className="ButtonLink">Berintraksi dengan BackEnd</Link>
+        <Link to="/router" className="ButtonLink">React Router</Link>
+        <Link to="/redux" className="ButtonLink">State Management Redux</Link>
+        <Link to="/context" className="ButtonLink">State Management Context</Link>
+        <Link to="/globalapi" className="ButtonLink">Global API</Link>
+        <Link to="/reacthooks" className="ButtonLink">React Hooks</Link>
       </div>
     </div>
   )

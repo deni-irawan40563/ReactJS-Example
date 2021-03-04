@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import '../Container.css'
-
 export default class StateFull extends Component {
   render() {
     return (

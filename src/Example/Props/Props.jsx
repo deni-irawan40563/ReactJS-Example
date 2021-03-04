@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import CardProps from './CardProps'
-import '../Container.css'
-
 export class Props extends Component {
   render() {
     return (

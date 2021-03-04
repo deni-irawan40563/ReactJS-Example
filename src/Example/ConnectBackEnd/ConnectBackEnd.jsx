@@ -113,10 +113,12 @@ export default class ConnectBackEnd extends Component {
   */
       this.handleGetData()
     }
-
+    handleGoDetail = (id) => {
+      this.props.history.push(`/products/${id}`);
+    }
   render() {
     return (
-      <div className="container mt-5 p-3">
+      <div className="container mt-5">
         <h1 className="text-center">Connect Ke Back-end</h1>
         <h3 className="text-center">C.R.U.D</h3>
         <div className="form-group">
@@ -127,7 +129,7 @@ export default class ConnectBackEnd extends Component {
         <div className="card-group">
           {
             this.state.product.map(product => {
-              return <CardProduct key={product.id} data={product} delete={this.handleDelete} update={this.handleUpdate}/>
+              return <CardProduct key={product.id} data={product} delete={this.handleDelete} update={this.handleUpdate} goDetail={this.handleGoDetail}/>
             })
           }
         </div>

@@ -1,11 +1,9 @@
 import React from 'react'
-import '../Container.css'
-
 export default function CardProps(props) {
   return (
     <div>
       <div className="card text-center m-3">
-        <img src={props.img} class="card-img-top" alt={props.name} />
+        <img src={props.img} className="card-img-top card-img" alt={props.name} />
         <div className="card-body">
           <h1 className="card-text">{props.name} </h1>
           <p className="card-text">{props.desc}</p>
