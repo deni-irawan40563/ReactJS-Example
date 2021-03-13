@@ -85,7 +85,6 @@ export default class ConnectBackEnd extends Component {
       }else{
         this.handleUpdateProducts()
       }
-      
     }
 
     componentDidMount(){

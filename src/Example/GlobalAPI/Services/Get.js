@@ -1,7 +1,5 @@
 import axios from 'axios'
-
-const defaultPath = 'http://localhost:2000';
-const externalPath = 'https://jsonplaceholder.typicode.com';
+import {defaultPath, externalPath} from './config';
 
 const Get = (root, path) => {
   const promise = new Promise((resolve, reject)=>{
@@ -15,12 +13,4 @@ const Get = (root, path) => {
   return promise
 }
 
-const getProducts = () => Get(true, 'api/products');
-const getUser = () => Get(false, 'users');
-
-const API = {
-  getProducts,
-  getUser
-}
-
-export default API;
+export default Get;

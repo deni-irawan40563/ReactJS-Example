@@ -1,12 +1,52 @@
 import React, { Component } from 'react'
-import API from './Services/GlobalAPI'
+import API from './Services/index'
 import ProductCard from '../ConnectBackEnd/ProductCard'
 export default class GlobalAPI extends Component {
   state = {
     product : [],
-    users : []
+    users : [],
+    postProduct : {
+      id : '',
+      name : '',
+      image : ''
+    },
+    isUpdate : false
   }
 
+  //Post Data From API
+  handlePostData = () => {
+    API.postProducts(this.state.postProduct)
+    .then((res)=>{
+      alert(`Submit Data : ${this.state.postProduct.name} status ${res.status} Success`);
+      this.setState({
+        isUpdate : false,
+        postProduct : {
+          id : '',
+          name : '',
+          image : ''
+        }
+      })
+      this.getProductsPost()
+    }, (err)=>{
+      alert(`Submit Data : Failed Because ${err}`);
+    })
+  }
+
+  //Create Id Data
+  handlePost = (event) => {
+    let newPostProduct = {...this.state.postProduct}; //Mengclone object state postProduct
+    let crypto = require("crypto");
+    let createId = crypto.randomBytes(5).toString('hex');
+    if(!this.state.isUpdate){
+        newPostProduct['id'] = createId
+    }
+    newPostProduct[event.target.name] = event.target.value //Menentukan target lewat name
+    this.setState({
+      postProduct : newPostProduct
+    })
+  }
+
+  //Read Data From API
   getProductsPost = () => {
     API.getProducts()
     .then(res => {
@@ -22,9 +62,50 @@ export default class GlobalAPI extends Component {
       })
     })
   }
+  //Update Data From API
+  handleUpdate = (data) => {
+    this.setState({
+      postProduct : data,
+      isUpdate : true
+    })
+
+  }
+  handleUpdateProducts = () => {
+    API.updateData(this.state.postProduct.id, this.state.postProduct)
+    .then((res)=>{
+      this.getProductsPost()
+      this.setState({
+        isUpdate : false,
+        postProduct : {
+          id : '',
+          name : '',
+          image : ''
+        }
+      })
+    }, (err) => {
+      alert(err)
+    })      
+  }
+  //Delete Data From API
+  handleDelete = (id) => {
+    API.deleteData(id)
+    .then(res => {
+      alert(`delete data is ${res.statusText} status ${res.status}`)
+      this.getProductsPost()
+    })
+    
+  }
 
   componentDidMount(){
     this.getProductsPost()
+  }
+
+  handleSubmit = () => {
+    if(!this.state.isUpdate){
+        this.handlePostData()
+    }else{
+      this.handleUpdateProducts()
+    }
   }
 
   render() {
@@ -59,11 +140,16 @@ export default class GlobalAPI extends Component {
             </div>
           </div>
         </div>
+        <div className="form-group mt-4">
+          <input type="text" value={this.state.postProduct.name} placeholder="Nama Product" className="input mr-2 p-1" name="name" id="name"  onChange={this.handlePost}/>
+          <input type="text" value={this.state.postProduct.image} placeholder="Url Gambar" className="input mr-2 p-1" name="image" id="image" onChange={this.handlePost}/>
+          <button className="btn btn-primary ml-2 p-1 mt-0" onClick={this.handleSubmit}>Simpan</button>
+        </div>
         <div className="card-group">
           {
-            this.state.users.map(
+            this.state.product.map(
               product => {
-                  return <ProductCard key={product.id} data={product} />
+                  return <ProductCard key={product.id} data={product} delete={this.handleDelete} update={this.handleUpdate} />
               }
             )
           }
